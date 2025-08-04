@@ -1,0 +1,280 @@
+@font-face {
+    font-family: "NunitoSans";
+    src: url("resources/NunitoSans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* GLOBAL */
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    font-family: "NunitoSans";
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* SECCIONES */
+.section {
+    height: 100vh;
+    position: relative;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* ABOUT */
+#about {
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+#about p {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+/* HEADINGS */
+h2 {
+    font-size: 4em;
+    text-align: center;
+}
+
+/* EXPERIENCE */
+#experience ul {
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* HERO */
+#hero {
+    background-image: url("resources/topologyBlack.svg");
+    height: 100vh;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-image: url("resources/topologyLowWhite.svg");
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.hero-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.hero-text {
+    text-align: center;
+    color: black;
+}
+
+.hero-text > p {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a {
+    font-size: 2.2rem;
+    color: black;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* FORM CONTACTO */
+footer {
+    background-color: white;
+    color: black;
+    background-image: url("resources/topologyWhite.svg");
+}
+
+.footer-contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* SCROLL BUTTON */
+.scroll-button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    width: 80px;
+    height: 80px;
+}
+
+.scroll-button svg {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-button.scroll-black svg path {
+    fill: black;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 670px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-text {
+        text-align: center;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 535px) {
+    .scroll-button {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+    }
+
+    .section {
+        padding-bottom: 100px;
+    }
+
+    #about p {
+        font-size: 1.4em;
+        max-width: 100%;
+    }
+
+    .content-wrapper {
+        padding: 0 10px;
+    }
+
+    #experience ul {
+        padding: 0 10px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #experience ul li {
+        font-size: 0.8em;
+        word-wrap: break-word;
+    }
+
+    #experience {
+        padding-bottom: 100px;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
