@@ -65,6 +65,7 @@ h2 {
 #hero {
     align-items: center;
     background-image: url("resources/topologyBlack.svg");
+    background-size: cover;
     color: white;
     display: flex;
     flex-direction: column;
@@ -78,6 +79,7 @@ h2 {
     align-items: center;
     background-color: white;
     background-image: url("resources/topologyLowWhite.svg");
+    background-size: cover;
     border-radius: 30px;
     display: flex;
     gap: 20px;
